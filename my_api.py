@@ -45,7 +45,7 @@ def asr(request: AsrRequest):
     res = model.generate(
         input=local_file_path,
         cache={},
-        language=request.language,  # "zh", "en", "yue", "ja", "ko", "nospeech"
+        language=request.language,  # "auto", "zh", "en", "yue", "ja", "ko", "nospeech"
         use_itn=True,
         batch_size_s=60,
         merge_vad=True,
